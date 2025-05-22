@@ -167,7 +167,7 @@ class VNCProtocol(Protocol):
 
 
 class CanaryVNC(Factory, CanaryService):
-    NAME = "VNC"
+    NAME = "vnc"
     protocol = VNCProtocol
 
     def __init__(self, config=None, logger=None):

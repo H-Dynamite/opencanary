@@ -22,7 +22,7 @@ class SIPServer(Base):
 
 
 class CanarySIP(CanaryService):
-    NAME = "SIP"
+    NAME = "sip"
 
     def __init__(self, config=None, logger=None):
         CanaryService.__init__(self, config=config, logger=logger)
