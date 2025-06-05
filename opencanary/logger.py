@@ -366,11 +366,11 @@ class WebhookHandler(logging.Handler):
 
         if "application/json" in self.kwargs.get("headers", {}).values():
             response = requests.request(
-                method=self.method, url=self.url, json=data, **self.kwargs
+                method=self.method, url=self.url, json=data, verify = False, **self.kwargs
             )
         else:
             response = requests.request(
-                method=self.method, url=self.url, data=data, **self.kwargs
+                method=self.method, url=self.url, data=data, verify = False, **self.kwargs
             )
 
         if response.status_code != self.status_code:
